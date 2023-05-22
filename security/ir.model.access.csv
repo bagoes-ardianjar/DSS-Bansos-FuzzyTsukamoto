@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_penduduk_indonesia,access_penduduk_indonesia,model_penduduk_indonesia,,1,1,1,1
+access_parameter_penghasilan_mamdani,access_parameter_penghasilan_mamdani,model_parameter_penghasilan_mamdani,,1,1,1,1
+access_parameter_pengeluaran_mamdani,access_parameter_pengeluaran_mamdani,model_parameter_pengeluaran_mamdani,,1,1,1,1
+access_hitung_kelayakan,access_hitung_kelayakan,model_hitung_kelayakan,,1,1,1,1
+access_result_kelayakan,access_result_kelayakan,model_result_kelayakan,,1,1,1,1

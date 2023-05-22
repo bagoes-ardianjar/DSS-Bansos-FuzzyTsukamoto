@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="parent_SPK_id"
+        name="SPK"
+        sequence="1"/>
+        <menuitem
+            id="child_data_penduduk_id"
+            name="Penduduk"
+            sequence="1"
+            parent="tugas_kuliah_spk.parent_SPK_id"
+            action="tugas_kuliah_spk.data_penduduk_actions_id"/>
+        <menuitem
+            id="child_hitung_kelayakan_id"
+            name="Hitung Kelayakan"
+            sequence="5"
+            parent="tugas_kuliah_spk.parent_SPK_id"
+            action="tugas_kuliah_spk.actions_wiz_hitung_kelayakan"/>
+        <menuitem
+            id="child_configuration_id"
+            name="Configuration"
+            sequence="10"
+            parent="tugas_kuliah_spk.parent_SPK_id"/>
+            <menuitem
+                id="child_penghasilan_id"
+                name="Parameter Penghasilan"
+                sequence="101"
+                parent="tugas_kuliah_spk.child_configuration_id"
+                action="tugas_kuliah_spk.parameter_penghasilan_actions_id"/>
+            <menuitem
+                id="child_pengeluaran_id"
+                name="Parameter Pengeluaran"
+                sequence="102"
+                parent="tugas_kuliah_spk.child_configuration_id"
+                action="tugas_kuliah_spk.parameter_pengeluaran_actions_id"/>
+</odoo>

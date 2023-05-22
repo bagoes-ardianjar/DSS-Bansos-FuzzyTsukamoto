@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="data_penduduk_tree_view_id" model="ir.ui.view">
+            <field name="name">data_penduduk_tree_view_id</field>
+            <field name="model">penduduk.indonesia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="ktp"/>
+                    <field name="nama_kepala_keluarga"/>
+                    <field name="tanggal_lahir"/>
+                    <field name="penghasilan"/>
+                    <field name="pengeluaran"/>
+                    <field name="hasil_kelayakan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="data_penduduk_form_view_id" model="ir.ui.view">
+            <field name="name">data_penduduk_form_view_id</field>
+            <field name="model">penduduk.indonesia</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="ktp"/>
+                                <field name="nama_kepala_keluarga"/>
+                            </group>
+                            <group>
+                                <field name="tanggal_lahir"/>
+                                <field name="penghasilan"/>
+                                <field name="pengeluaran"/>
+                                <field name="hasil_kelayakan" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="parameter_penghasilan_tree_view_id" model="ir.ui.view">
+            <field name="name">parameter_penghasilan_tree_view_id</field>
+            <field name="model">parameter.penghasilan.mamdani</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="penghasilan_sedikit_range_awal"/>
+                    <field name="penghasilan_sedikit_range_akhir"/>
+                    <field name="penghasilan_cukup_range_awal"/>
+                    <field name="penghasilan_cukup_range_akhir"/>
+                    <field name="penghasilan_banyak_range_awal"/>
+                    <field name="penghasilan_banyak_range_akhir"/>
+                    <field name="derajat_keanggotaan_min"/>
+                    <field name="derajat_keanggotaan_max"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="parameter_penghasilan_form_view_id" model="ir.ui.view">
+            <field name="name">parameter_penghasilan_form_view_id</field>
+            <field name="model">parameter.penghasilan.mamdani</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" readonly="1">
+                            <h1>
+                                <field name="name" readonly="1" nolabel="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <label for="penghasilan_sedikit_range_awal" string="Penghasilan Sedikit"/>
+                            <div class="o_row">
+                                <field name="penghasilan_sedikit_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="penghasilan_sedikit_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="penghasilan_cukup_range_awal" string="Penghasilan Cukup"/>
+                            <div class="o_row">
+                                <field name="penghasilan_cukup_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="penghasilan_cukup_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="penghasilan_banyak_range_awal" string="Penghasilan Banyak"/>
+                            <div class="o_row">
+                                <field name="penghasilan_banyak_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="penghasilan_banyak_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="derajat_keanggotaan_min" string="Derajat Keanggotaan"/>
+                            <div class="o_row">
+                                <field name="derajat_keanggotaan_min"/>
+                                <span>||</span>
+                                <field name="derajat_keanggotaan_max"/>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="parameter_pengeluaran_tree_view_id" model="ir.ui.view">
+            <field name="name">parameter_pengeluaran_tree_view_id</field>
+            <field name="model">parameter.pengeluaran.mamdani</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="pengeluaran_sedikit_range_awal"/>
+                    <field name="pengeluaran_sedikit_range_akhir"/>
+                    <field name="pengeluaran_cukup_range_awal"/>
+                    <field name="pengeluaran_cukup_range_akhir"/>
+                    <field name="pengeluaran_banyak_range_awal"/>
+                    <field name="pengeluaran_banyak_range_akhir"/>
+                    <field name="derajat_keanggotaan_min"/>
+                    <field name="derajat_keanggotaan_max"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="parameter_pengeluaran_form_view_id" model="ir.ui.view">
+            <field name="name">parameter_pengeluaran_form_view_id</field>
+            <field name="model">parameter.pengeluaran.mamdani</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title" readonly="1">
+                            <h1>
+                                <field name="name" readonly="1" nolabel="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <label for="pengeluaran_sedikit_range_awal" string="Pengeluaran Sedikit"/>
+                            <div class="o_row">
+                                <field name="pengeluaran_sedikit_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="pengeluaran_sedikit_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="pengeluaran_cukup_range_awal" string="Pengeluaran Cukup"/>
+                            <div class="o_row">
+                                <field name="pengeluaran_cukup_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="pengeluaran_cukup_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="pengeluaran_banyak_range_awal" string="Pengeluaran Banyak"/>
+                            <div class="o_row">
+                                <field name="pengeluaran_banyak_range_awal" nolabel="1"/>
+                                <span>||</span>
+                                <field name="pengeluaran_banyak_range_akhir" nolabel="1"/>
+                            </div>
+                            <label for="derajat_keanggotaan_min" string="Derajat Keanggotaan"/>
+                            <div class="o_row">
+                                <field name="derajat_keanggotaan_min"/>
+                                <span>||</span>
+                                <field name="derajat_keanggotaan_max"/>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_form_hitung_kelayakan_id" model="ir.ui.view">
+            <field name="name">wizard_form_hitung_kelayakan_id</field>
+            <field name="model">hitung.kelayakan</field>
+            <field name="arch" type="xml">
+                <form string="Hitung Kelayakan">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="kk" options="{'always_reload': True,'limit': 10, 'no_create': true, 'create': false, 'create_edit': false, 'no_open_edit':true, 'no_open': true}"/>
+                                <field name="penghasilan"/>
+                                <field name="parameter_penghasilan_id"
+                                       options="{'always_reload': True,'limit': 10, 'no_create': true, 'create': false, 'create_edit': false, 'no_open_edit':true, 'no_open': true}"
+                                       required="1"/>
+                            </group>
+                            <group>
+                                <field name="nama_warga"/>
+                                <field name="pengeluaran"/>
+                                <field name="parameter_pengeluaran_id"
+                                       options="{'always_reload': True,'limit': 10, 'no_create': true, 'create': false, 'create_edit': false, 'no_open_edit':true, 'no_open': true}"
+                                       required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Hitung" name="func_hitung" type="object" class="oe_highlight"/>
+                        <button string="Batal" special="cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="form_wiz_keterangan_id" model="ir.ui.view">
+            <field name="name">form_wiz_keterangan_id</field>
+            <field name="model">result.kelayakan</field>
+            <field name="arch" type="xml">
+                <form string="Hasil Hitung">
+                    <h1>
+                        <field name="keterangan" readonly="1"/>
+                    </h1>
+                </form>
+                <footer>
+                </footer>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="data_penduduk_actions_id" model="ir.actions.act_window">
+        <field name="name">Penduduk</field>
+        <field name="res_model">penduduk.indonesia</field>
+    </record>
+
+    <record id="data_penduduk_actions_tree_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="tugas_kuliah_spk.data_penduduk_tree_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.data_penduduk_actions_id"/>
+    </record>
+
+    <record id="data_penduduk_actions_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tugas_kuliah_spk.data_penduduk_form_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.data_penduduk_actions_id"/>
+    </record>
+
+    <record id="parameter_penghasilan_actions_id" model="ir.actions.act_window">
+        <field name="name">Parameter Penghasilan</field>
+        <field name="res_model">parameter.penghasilan.mamdani</field>
+    </record>
+
+    <record id="parameter_penghasilan_actions_tree_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="tugas_kuliah_spk.parameter_penghasilan_tree_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.parameter_penghasilan_actions_id"/>
+    </record>
+
+    <record id="parameter_penghasilan_actions_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tugas_kuliah_spk.parameter_penghasilan_form_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.parameter_penghasilan_actions_id"/>
+    </record>
+
+    <record id="parameter_pengeluaran_actions_id" model="ir.actions.act_window">
+        <field name="name">Parameter Pengeluaran</field>
+        <field name="res_model">parameter.pengeluaran.mamdani</field>
+    </record>
+
+    <record id="parameter_pengeluaran_actions_tree_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="tugas_kuliah_spk.parameter_pengeluaran_tree_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.parameter_pengeluaran_actions_id"/>
+    </record>
+
+    <record id="parameter_pengeluaran_actions_form_view_id" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tugas_kuliah_spk.parameter_pengeluaran_form_view_id"/>
+        <field name="act_window_id" ref="tugas_kuliah_spk.parameter_pengeluaran_actions_id"/>
+    </record>
+
+    <record id="actions_wiz_hitung_kelayakan" model="ir.actions.act_window">
+        <field name="name">Hitung Kelayakan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hitung.kelayakan</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tugas_kuliah_spk.wizard_form_hitung_kelayakan_id"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

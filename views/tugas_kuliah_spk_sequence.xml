@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sequence_parameter_penghasilan_id" model="ir.sequence">
+        <field name="name">Sequence Parameter Penghasilan</field>
+        <field name="code">parameter.penghasilan.mamdani</field>
+        <field name="prefix">IM/</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+        <field eval="True" name="use_date_range"/>
+        <field eval="False" name="company_id"/>
+        <field name="padding">4</field>
+    </record>
+
+    <record id="sequence_parameter_pengeluaran_id" model="ir.sequence">
+        <field name="name">Sequence Parameter Pengeluaran</field>
+        <field name="code">parameter.pengeluaran.mamdani</field>
+        <field name="prefix">OM/</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+        <field eval="True" name="use_date_range"/>
+        <field eval="False" name="company_id"/>
+        <field name="padding">4</field>
+    </record>
+</odoo>
